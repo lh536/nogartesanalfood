@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    <title>Plantilla TailwindCSS Básica</title>
+</head>
+
+<body class="container mx-auto">
+
+    <div x-data="{ open: false }">
+        <button @click="open = true">Despegar Menu</button>
+        <ul x-show="open" @click.away="open = false">
+            Menú propiamente dicho
+        </ul>
+    </div>
+
+    <div class="text-center font-bold text-4xl border-4 border-red-600">
+        <p class="">Hola Mundo!! (Sin estilos) 0123456789 &star; &starf;</p>
+        <p class="propiaClase">Hola mundo con estilos propios (.propiaClase color: red;background-color: blue;) 0123456789 &star; &starf;</p>
+        <p class="claseExterna">Hola mundo con clase importada por postCSS (.claseExterna color: white;background-color: black;) 0123456789 &star; &starf;</p>
+        <p class="text-yellow-400 bg-teal-500">Hola mundo con estilos de TailwindCSS (.text-yellow-400 .bg-teal-500) 0123456789 &star; &starf;</p>
+        <p class="clasePersonalizadaTailwindCSS">Hola mundo con una clase personalizada en tailwindcss.css con @apply (.text-gray-700 .bg-pink-500) 0123456789 &star; &starf;</p>
+        <p class="text-prueba-200 bg-magentaSM font-montserrat">Hola mundo con colores personalizados en el tailwind.config.js (.text-prueba-200 .bg-magentaSM .font-montserrat) 0123456789 &star; &starf;</p>
+    </div>
+    <button class="hover:zoom relative font-bold items-baseline -mt-6 bg-indigo-400 text-md rounded-lg py-2 px-4 block mx-auto">Botón con responsive en tailwind.congfig.js &equiv;</button>
+    <p class="md:rotate-180 bg-no-repeat bg-cover bg-center">Clases para centrar una imagen y ponerla de fondo -- RESPONSIVE EN +MD (bg-no-repeat bg-cover bg-center/bg-bottom)</p>
+    <p class="w-64 h-full object-contain">Clases para centrar una imagen y ponerla de fondo -- REVISAR (w-48 h-full object-contain/object-cover object-left)</p>
+    <p class="claseConVariable text-2xl">Hola mundo con fondo oscuro y texto blando desde una variable css y clases de tailwindcss</p>
+    <p class="claseConjuntoVariables">Hola mundo -- NO FUNCIONA!!!</p>
+    <footer class="container mx-auto absolute bottom-0 bg-orange-500 center text-2xl text-center">Footer pegado al final de la página</footer>
+
+</body>
+<script src="./js/main.js"></script>
+
+</html>
