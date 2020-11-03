@@ -10,25 +10,13 @@ module.exports = {
     },
     theme: {
         fontFamily: {
-            montserrat: ['Montserrat', 'sans-serif'],
-            fira: ['Fira Sans', 'sans-serif']
+            sacramento: ['Sacramento', 'sans-serif'],
+            kaushan: ['Kaushan Script', 'sans-serif'],
         },
         extend: {
             colors: {
-                magentaSM: '#E92197',
-                grisSM: '#B6BAD0',
-                prueba: {
-                    100: '#000',
-                    200: '#fff',
-                    300: '#E92197',
-                },
-            },
-            gridTemplateColumns: {
-                '16': 'repeat(16, minmax(0, 1fr))',
-            },
-            zIndex: {
-                '-1': '-1',
-                '-2': '-2',
+                amarilloNoga: '#FFC430',
+                rojoNoga: '#990012',
             },
         },
     },
